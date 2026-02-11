@@ -16,7 +16,7 @@ Currently includes:
 - dotenv
 
 ---
-
+```
 ## Folder Structure
 
 Server/
@@ -26,7 +26,7 @@ Server/
 ├── index.js            → server entry point
 ├── .env                → environment variables
 ├── package.json
-
+```
 ---
 
 ## How It Works
