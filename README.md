@@ -1,79 +1,195 @@
-# Eye Tracking Communication System – Backend
+# 👁️ Eye Tracking Communication System
 
-## Overview
-This is the backend server built using Node.js and Express.
-It handles API requests and provides endpoints for the application.
+A full-stack web application that enables communication using eye-tracking technology.
 
-Currently includes:
-- Health check endpoint
+This project includes:
+
+* 🌐 Frontend (Client)
+* ⚙️ Backend API (Server)
+* 🔌 REST communication between both
+* 🩺 Health monitoring endpoint
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+* (React / Bootstrap if added later)
+
+### Backend
+
+* Node.js
+* Express.js
+* CORS
+* dotenv
 
 ---
 
-## Tech Stack
-- Node.js
-- Express.js
-- CORS
-- dotenv
+## 📁 Project Structure
 
----
 ```
-## Folder Structure
-
-Server/
+EyeTrackingCommunicationSystem/
 │
-├── controllers/        → business logic
-├── routes/             → API endpoints
-├── index.js            → server entry point
-├── .env                → environment variables
-├── package.json
+├── client/              → Frontend application (UI)
+│
+├── server/              → Backend API
+│   ├── controllers/     → Business logic
+│   ├── routes/          → API endpoints
+│   ├── index.js         → Server entry point
+│   ├── package.json
+│   └── .env
+│
+├── README.md
+└── .gitignore
 ```
+
 ---
 
-## How It Works
+## 🧠 Architecture (How it Works)
 
-Request Flow:
+### Request Flow
 
-Client → Route → Controller → Response
+```
+Frontend → API Route → Controller → Response
+```
 
 Example:
+
+```
 GET /api/health
-→ routes/health.js
-→ controllers/healthController.js
-→ JSON response
+   ↓
+routes/health.js
+   ↓
+controllers/healthController.js
+   ↓
+JSON response
+```
 
 ---
 
-## Setup
+## ⚙️ Backend Details
 
-Install dependencies:
+### MVC Pattern Used
 
-npm install
+We follow separation of concerns:
 
-Run development server:
+* Routes → define endpoints
+* Controllers → contain logic
+* index.js → server setup
 
-npm run dev
+This keeps the code:
 
-Run production server:
-
-npm start
+* clean
+* scalable
+* production-ready
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
 ### Health Check
+
+```
 GET /api/health
+```
 
 Response:
+
+```json
 {
   "status": "ok",
   "message": "Backend running successfully"
 }
+```
+
+### Why Health Route?
+
+Used for:
+
+* server uptime checks
+* deployment monitoring
+* debugging
+* DevOps health checks
 
 ---
 
-## Why Health Route?
-Used for:
-- server monitoring
-- deployment checks
-- uptime testing
+## 🛠️ Setup Instructions
+
+### 1. Clone repo
+
+```
+git clone <repo-url>
+cd EyeTrackingCommunicationSystem
+```
+
+---
+
+### 2. Install backend dependencies
+
+```
+cd server
+npm install
+```
+
+---
+
+### 3. Run backend
+
+```
+npm run dev
+```
+
+Server runs at:
+
+```
+http://localhost:5000
+```
+
+---
+
+### 4. Run frontend
+
+```
+cd client
+npm install
+npm start
+```
+
+---
+
+## 🌍 Environment Variables (server/.env)
+
+```
+PORT=5000
+```
+
+---
+
+## ✨ Features Implemented
+
+✅ Express backend setup
+✅ MVC architecture
+✅ CORS enabled
+✅ Health monitoring route
+✅ Clean folder structure
+✅ Frontend + Backend integration
+
+---
+
+## 📌 Future Improvements
+
+* Eye tracking integration
+* Authentication
+* Database support
+* Real-time communication
+* Deployment (Render/Vercel)
+
+---
+
+## 👩‍💻 Author
+
+Built with ❤️ using Node.js & JavaScript
